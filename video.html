@@ -1,0 +1,331 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#171719">
+
+  <title>Khata-Rist | Video Editing</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+  <script src="script.js" defer></script>
+
+  <style>
+    /* ===== VIDEO EDITING PAGE ===== */
+
+    .editing-page {
+      width: 100%;
+      max-width: 1100px;
+      margin: auto;
+      padding: 30px 20px 50px;
+    }
+
+    /* ===== LANGUAGE SWITCHER ===== */
+
+    .language-switcher {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      margin: 20px auto 30px;
+    }
+
+    .lang-btn {
+      padding: 10px 20px;
+      border: 1px solid #555;
+      border-radius: 30px;
+      background: #292929;
+      color: white;
+      font-size: 14px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .lang-btn:hover {
+      background: #444;
+      transform: translateY(-3px);
+    }
+
+    .lang-btn.active {
+      background: #20c965;
+      border-color: #20c965;
+      color: white;
+      font-weight: bold;
+    }
+
+    /* ===== BACK BUTTON ===== */
+
+    .back-link {
+      display: inline-block;
+      color: #c4b5ff;
+      text-decoration: none;
+      margin-bottom: 30px;
+      transition: 0.3s;
+    }
+
+    .back-link:hover {
+      color: white;
+      transform: translateX(-5px);
+    }
+
+    /* ===== TITLE ===== */
+
+    .editing-title {
+      text-align: center;
+      font-size: clamp(28px, 5vw, 42px);
+      margin-bottom: 10px;
+      letter-spacing: 2px;
+      color: white;
+    }
+
+    .editing-description {
+      text-align: center;
+      color: #b8b8c2;
+      margin-bottom: 35px;
+    }
+
+    /* ===== VIDEO GRID ===== */
+
+    .editing-grid {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 25px;
+      width: 100%;
+      max-width: 950px;
+      margin: 0 auto;
+      padding: 15px;
+    }
+
+    .editing-card {
+      flex: 0 1 350px;
+      width: calc(50% - 13px);
+      min-width: 0;
+      max-width: 350px;
+      padding: 10px;
+      background: rgba(43, 43, 48, 0.92);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 18px;
+      text-align: center;
+      overflow: hidden;
+      transition: transform 0.3s, border-color 0.3s;
+    }
+
+    .editing-card:hover {
+      transform: translateY(-5px);
+      border-color: #a78bfa;
+    }
+
+    .video-player {
+      width: 100%;
+      aspect-ratio: 9 / 16;
+      overflow: hidden;
+      border-radius: 12px;
+      background: #080808;
+    }
+
+.video-player video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
+  object-fit: contain;
+  background: #080808;
+}
+    .editing-card h2 {
+      color: white;
+      font-size: 16px;
+      padding: 14px 5px 5px;
+      text-align: center;
+    }
+
+    /* ===== FOOTER ===== */
+
+    .editing-page .footer {
+      text-align: center;
+      margin-top: 45px;
+      color: #b8b8c2;
+    }
+
+    .editing-page .footer .fa-heart {
+      color: #ff5c85;
+    }
+
+    /* ===== MOBILE ===== */
+
+    @media (max-width: 600px) {
+      .editing-page {
+        padding: 22px 15px 40px;
+      }
+
+      .editing-grid {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .editing-card {
+        flex: none;
+        width: 100%;
+        max-width: 350px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="editing-page">
+
+    <!-- LANGUAGE SWITCHER -->
+
+    <div class="language-switcher">
+      <button class="lang-btn active" data-lang="en">🇺🇸 English</button>
+      <button class="lang-btn" data-lang="ja">🇯🇵 日本語</button>
+    </div>
+
+    <!-- BACK TO HOME -->
+
+    <a href="index.html" class="back-link">
+      <i class="fa-solid fa-arrow-left"></i>
+      <span data-en="Back to Home" data-ja="ホームに戻る">Back to Home</span>
+    </a>
+
+    <!-- PAGE TITLE -->
+
+    <h1 class="editing-title"
+        data-en="VIDEO EDITING"
+        data-ja="動画編集">
+      VIDEO EDITING
+    </h1>
+
+    <p class="editing-description"
+       data-en="My Video Editing Creations"
+       data-ja="私の動画編集作品">
+      My Video Editing Creations
+    </p>
+
+    <!-- VIDEO COLLECTION -->
+
+    <section class="editing-grid">
+
+      <!-- VIDEO 1 -->
+
+<article class="editing-card">
+  <div class="video-player">
+    <video controls playsinline preload="metadata">
+      <source src="Video 1.mp4" type="video/mp4">
+      Your browser does not support video playback.
+    </video>
+  </div>
+
+  <h2 data-en="Video 1" data-ja="動画 1">Video 1</h2>
+</article>
+      <!-- VIDEO 2 -->
+
+<article class="editing-card">
+  <div class="video-player">
+    <video controls playsinline preload="metadata">
+      <source src="Video 2.mp4" type="video/mp4">
+      Your browser does not support video playback.
+    </video>
+  </div>
+
+  <h2 data-en="Video 2" data-ja="動画 2">Video 2</h2>
+</article>
+      <!-- VIDEO 3 -->
+<article class="editing-card">
+  <div class="video-player">
+    <video controls playsinline preload="metadata">
+      <source src="Video 3.mp4" type="video/mp4">
+      Your browser does not support video playback.
+    </video>
+  </div>
+
+  <h2 data-en="Video 3" data-ja="動画 3">Video 3</h2>
+</article>
+      <!-- VIDEO 4 -->
+
+<article class="editing-card">
+  <div class="video-player">
+    <video controls playsinline preload="metadata">
+      <source src="Video 4.mp4" type="video/mp4">
+      Your browser does not support video playback.
+    </video>
+  </div>
+
+  <h2 data-en="Video 4" data-ja="動画 4">Video 4</h2>
+</article>
+
+      <!-- VIDEO 5 -->
+
+<article class="editing-card">
+  <div class="video-player">
+    <video controls playsinline preload="metadata">
+      <source src="Video 5.mp4" type="video/mp4">
+      Your browser does not support video playback.
+    </video>
+  </div>
+
+  <h2 data-en="Video 5" data-ja="動画 5">Video 5</h2>
+</article>
+      <!-- VIDEO 6 -->
+
+<article class="editing-card">
+  <div class="video-player">
+    <video controls playsinline preload="metadata">
+      <source src="Video 6.mp4
+      " type="video/mp4">
+      Your browser does not support video playback.
+    </video>
+  </div>
+
+  <h2 data-en="Video 6" data-ja="動画 6">Video 6</h2>
+</article>
+
+      <!-- VIDEO 7 -->
+
+<article class="editing-card">
+  <div class="video-player">
+    <video controls playsinline preload="metadata">
+      <source src="Video 7.mp4
+      " type="video/mp4">
+      Your browser does not support video playback.
+    </video>
+  </div>
+
+  <h2 data-en="Video 6" data-ja="動画 7">Video 7</h2>
+</article>
+
+      <!-- VIDEO 8-->
+
+<article class="editing-card">
+  <div class="video-player">
+    <video controls playsinline preload="metadata">
+      <source src="Video 8.mp4
+      " type="video/mp4">
+      Your browser does not support video playback.
+    </video>
+  </div>
+
+  <h2 data-en="Video 6" data-ja="動画 8">Video 8</h2>
+</article>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+      <span data-en="Made with" data-ja="愛を込めて制作">Made with</span>
+      <i class="fa-solid fa-heart"></i>
+      <span data-en="by Khata-Rist" data-ja="Khata-Rist">by Khata-Rist</span>
+    </footer>
+
+  </main>
+
+</body>
+</html>
