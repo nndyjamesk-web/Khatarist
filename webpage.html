@@ -1,0 +1,240 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Design Projects | Khata-Rist</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+
+  <style>
+    .web-projects {
+      width: 90%;
+      max-width: 1100px;
+      margin: 60px auto;
+    }
+
+    /* LANGUAGE SWITCHER */
+
+    .language-switcher {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      margin: 20px auto 30px;
+    }
+
+    .lang-btn {
+      padding: 10px 20px;
+      border: 1px solid #555;
+      border-radius: 30px;
+      background: #292929;
+      color: white;
+      font-size: 14px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .lang-btn:hover {
+      background: #444;
+      transform: translateY(-3px);
+    }
+
+    .lang-btn.active {
+      background: #20c965;
+      border-color: #20c965;
+      color: white;
+      font-weight: bold;
+    }
+
+    .back-home {
+      color: #a78bfa;
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 30px;
+    }
+
+    .page-heading {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .page-heading h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .page-heading p {
+      color: #b8b8c2;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+    }
+
+    .web-card {
+      background: rgba(43, 43, 48, 0.92);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 20px;
+      padding: 25px;
+      transition: 0.3s;
+    }
+
+    .web-card:hover {
+      transform: translateY(-7px);
+      border-color: #a78bfa;
+    }
+
+    .web-icon {
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+
+    .web-card h2 {
+      margin-bottom: 12px;
+    }
+
+    .web-card p {
+      color: #b8b8c2;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    .project-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #a78bfa;
+      color: #171719;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .project-button:hover {
+      opacity: 0.8;
+    }
+
+    @media (max-width: 600px) {
+      .page-heading h1 {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="web-projects">
+
+    <!-- LANGUAGE SWITCHER -->
+
+    <div class="language-switcher">
+      <button class="lang-btn active" data-lang="en">🇺🇸 English</button>
+      <button class="lang-btn" data-lang="ja">🇯🇵 日本語</button>
+    </div>
+
+    <!-- BACK TO HOME -->
+
+    <a href="index.html" class="back-home">
+      ← <span data-en="Back to Home" data-ja="ホームに戻る">Back to Home</span>
+    </a>
+
+    <!-- PAGE HEADING -->
+
+    <header class="page-heading">
+      <h1
+        data-en="MY WEB DESIGN PROJECTS"
+        data-ja="私のWebデザインプロジェクト">
+        MY WEB DESIGN PROJECTS
+      </h1>
+
+      <p
+        data-en="Websites I've created and projects I'm working on."
+        data-ja="これまでに制作したウェブサイトや、現在取り組んでいるプロジェクトを紹介します。">
+        Websites I've created and projects I'm working on.
+      </p>
+    </header>
+
+    <!-- PROJECT CARDS -->
+
+    <section class="project-grid">
+
+      <!-- PROJECT 1 -->
+
+      <article class="web-card">
+        <div class="web-icon">🌐</div>
+
+        <h2
+          data-en="My Social Website"
+          data-ja="私のソーシャルウェブサイト">
+          My Social Website
+        </h2>
+
+        <p
+          data-en="My personal website where I share my social media, videos and creative activities."
+          data-ja="SNS、動画、クリエイティブな活動を紹介する私の個人ウェブサイトです。">
+          My personal website where I share my social media,
+          videos and creative activities.
+        </p>
+
+        <a href="index.html" class="project-button">
+          <span data-en="View Project" data-ja="プロジェクトを見る">View Project</span>
+        </a>
+      </article>
+
+      <!-- PROJECT 2 -->
+
+      <article class="web-card">
+        <div class="web-icon">💻</div>
+
+        <h2
+          data-en="Portfolio Website"
+          data-ja="ポートフォリオサイト">
+          Portfolio Website
+        </h2>
+
+        <p
+          data-en="A personal portfolio website designed to introduce myself and display my skills and projects."
+          data-ja="自分自身を紹介し、スキルや制作したプロジェクトを紹介するためのポートフォリオサイトです。">
+          A personal portfolio website designed to introduce
+          myself and display my skills and projects.
+        </p>
+
+        <a href="#" class="project-button">
+          <span data-en="Coming Soon" data-ja="近日公開">Coming Soon</span>
+        </a>
+      </article>
+
+      <!-- PROJECT 3 -->
+
+      <article class="web-card">
+        <div class="web-icon">🎨</div>
+
+        <h2
+          data-en="Creative Website"
+          data-ja="クリエイティブウェブサイト">
+          Creative Website
+        </h2>
+
+        <p
+          data-en="A website project where I experiment with HTML, CSS, animations and responsive design."
+          data-ja="HTML、CSS、アニメーション、レスポンシブデザインを試しながら制作しているウェブサイトです。">
+          A website project where I experiment with HTML,
+          CSS, animations and responsive design.
+        </p>
+
+        <a href="#" class="project-button">
+          <span data-en="Coming Soon" data-ja="近日公開">Coming Soon</span>
+        </a>
+      </article>
+
+    </section>
+
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,221 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me | Khata-Rist</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+  <script src="script.js" defer></script>
+
+  <style>
+    .about-page {
+      max-width: 900px;
+      width: 100%;
+      margin: auto;
+      padding: 35px 20px 60px;
+      text-align: center;
+    }
+
+    .language-switcher {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      margin: 20px auto 30px;
+    }
+
+    .lang-btn {
+      padding: 10px 20px;
+      border: 1px solid #555;
+      border-radius: 30px;
+      background: #292929;
+      color: white;
+      font-size: 14px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .lang-btn:hover {
+      background: #444;
+      transform: translateY(-3px);
+    }
+
+    .lang-btn.active {
+      background: #20c965;
+      border-color: #20c965;
+      color: white;
+      font-weight: bold;
+    }
+
+    .back-home {
+      display: block;
+      text-align: left;
+      color: #fcfcfc;
+      text-decoration: none;
+      margin-bottom: 40px;
+    }
+
+    .about-picture {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #ffffff;
+      box-shadow: 0 0 35px rgba(246, 244, 255, 0.3);
+      margin-bottom: 25px;
+    }
+
+    .about-page h1 {
+      font-size: 34px;
+      letter-spacing: 3px;
+      margin-bottom: 12px;
+    }
+
+    .about-subtitle {
+      color: #ffffff;
+      margin-bottom: 30px;
+    }
+
+    .about-content {
+      background: rgba(43,43,48,.85);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 20px;
+      padding: 30px;
+      text-align: left;
+      line-height: 1.9;
+      color: #d0d0d8;
+    }
+
+    .about-content h2 {
+      color: white;
+      margin-bottom: 15px;
+    }
+
+    .about-content p {
+      margin-bottom: 15px;
+    }
+
+    .about-skills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 25px;
+    }
+
+    .about-skills span {
+      padding: 10px 18px;
+      border-radius: 30px;
+      background: rgba(167,139,250,.15);
+      border: 1px solid rgba(167,139,250,.3);
+      color: white;
+    }
+
+    @media(max-width:600px) {
+      .about-page { padding: 25px 15px 40px; }
+      .about-picture {
+        width: 160px;
+        height: 160px;
+      }
+      .about-content { padding: 22px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="about-page">
+
+    <!-- LANGUAGE SWITCHER -->
+    <div class="language-switcher">
+      <button class="lang-btn active" data-lang="en">🇺🇸 English</button>
+      <button class="lang-btn" data-lang="ja">🇯🇵 日本語</button>
+    </div>
+
+    <a href="index.html" class="back-home">
+      <i class="fa-solid fa-arrow-left"></i>
+      <span data-en="Back to Home" data-ja="ホームに戻る">Back to Home</span>
+    </a>
+
+    <img src="Kha.jpeg" alt="Khata-Rist" class="about-picture">
+
+    <h1 data-en="About Me" data-ja="私について">About Me</h1>
+
+    <p class="about-subtitle"
+       data-en="Welcome to my creative world"
+       data-ja="私のクリエイティブな世界へようこそ">
+      Welcome to my creative world
+    </p>
+
+    <section class="about-content">
+
+      <h2 data-en="Get to Know Me" data-ja="私について知ってください">
+        Get to Know Me
+      </h2>
+
+      <p
+        data-en="Hello! I'm Khata-Rist, originally from Nepal. I love music, creativity, anime and technology."
+        data-ja="こんにちは！ネパール出身のKhata-Ristです。音楽、クリエイティブな活動、アニメ、テクノロジーが大好きです。">
+        Hello! I'm Khata-Rist, originally from Nepal. I love music,
+        creativity, anime and technology.
+      </p>
+
+      <p
+        data-en="Before coming to Japan, I played music with The Insanes band. I enjoy playing guitar, singing and performing music."
+        data-ja="日本に来る前は、The Insanesというバンドで音楽活動をしていました。ギターを弾くこと、歌うこと、演奏することが好きです。">
+        Before coming to Japan, I played music with The Insanes band.
+        I enjoy playing guitar, singing and performing music.
+      </p>
+
+      <p
+        data-en="Currently, I live in Japan and study Information Technology. I'm learning web development, programming and other IT skills to build my future as an IT engineer."
+        data-ja="現在は日本に住み、情報技術を勉強しています。ITエンジニアになるために、Web開発やプログラミングなどのITスキルを学んでいます。">
+        Currently, I live in Japan and study Information Technology.
+        I'm learning web development, programming and other IT skills
+        to build my future as an IT engineer.
+      </p>
+
+      <p
+        data-en="I also enjoy creating and editing videos, exploring new ideas and learning new things. I'm always working to improve myself and turn my dreams into reality."
+        data-ja="動画の制作や編集、新しいアイデアを考えること、新しいことを学ぶことも好きです。自分自身を成長させ、夢を実現するために努力しています。">
+        I also enjoy creating and editing videos, exploring new ideas
+        and learning new things. I'm always working to improve myself
+        and turn my dreams into reality.
+      </p>
+
+      <p
+        data-en="This website is a place where I share my music, videos, creative projects and my journey from Nepal to Japan."
+        data-ja="このウェブサイトでは、音楽、動画、クリエイティブな作品、そしてネパールから日本への私の歩みを紹介しています。">
+        This website is a place where I share my music, videos,
+        creative projects and my journey from Nepal to Japan.
+      </p>
+
+      <h2 data-en="My Interests" data-ja="私の趣味・興味">
+        My Interests
+      </h2>
+
+      <div class="about-skills">
+        <span data-en="🎸 Music" data-ja="🎸 音楽">🎸 Music</span>
+        <span data-en="🎬 Video Editing" data-ja="🎬 動画編集">🎬 Video Editing</span>
+        <span data-en="🎨 Anime" data-ja="🎨 アニメ">🎨 Anime</span>
+        <span data-en="💻 Web Design" data-ja="💻 Webデザイン">💻 Web Design</span>
+        <span data-en="✨ Creativity" data-ja="✨ 創造力">✨ Creativity</span>
+      </div>
+
+    </section>
+
+    <footer class="footer">
+      <span data-en="Made with" data-ja="愛を込めて制作">Made with</span>
+      <i class="fa-solid fa-heart"></i>
+      <span data-en="by Khata-Rist" data-ja="Khata-Rist">by Khata-Rist</span>
+    </footer>
+
+  </main>
+
+</body>
+</html>
